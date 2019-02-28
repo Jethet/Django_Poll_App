@@ -2,7 +2,7 @@ February 25:
 After the first meeting with my coach Lori King, I started out learning Django with the Djangogirls tutorial. For this, I installed PaizaCloud and installed a virtual environment. The tutorial is interesting, though obviously the audience is meant to be of a younger age. Anyway, my goal was to work through the tutorial this week and also look at an HTML tutorial that codebar.io has on its website.
 
 February 27:
-The initial plan proved to be a bit too optimistic. The tutorial turned out to be a bit outdated: a newer version of Django caused problems. I decided to switch to a tutorial called Django-Marcador, aimed at creating an app to manage bookmarks. Interesting and I achieved some things (getting the app running on the development server, being able to use it and make changes online etc.). However, further down into the code (building the frontend, configuring URLs, views and templates) it turned out that also this tutorial used an older version of Django and there were too many conflicts in the code.
+The initial plan proved to be a bit too optimistic. The tutorial turned out to be somewhat outdated: a newer version of Django caused problems. I decided to switch to a tutorial called Django-Marcador, aimed at creating an app to manage bookmarks. Interesting and I achieved some things (getting the app running on the development server, being able to use it and make changes online etc.). However, further down into the code (building the frontend, configuring URLs, views and templates) it turned out that also this tutorial used an older version of Django and there were too many conflicts in the code.
 
 LESSONS LEARNED: Don't start any tutorials without being absolutely clear a) what the current version of the software used in the tutorial is, and b) whether it is using the right/latest version of Python 3.
 
@@ -17,5 +17,6 @@ So what can I say about this tutorial (docs.djangoproject.com)? It works so far.
 BUT: in almost all documentation and tutorials I have come across, the importance of a virtual environment was highlighted.
 That is very good because a venv is indeed important. But why is the information always incomplete? You get info on how to create and activate a virtual environment, but nobody explains that if you work with a venv you have to INSTALL DJANGO IN THE VENV even if you have instelled Django before. You should also CONTINUE in the venv with django-admin startproject mysite.
 Otherwise, you will not be able to run $python manage.py runserver and get to see the "Congratulations" page on hhttp://127.0.0.1:8000/.
-So there we are, lost at least four hours to find this out. They say you learn by doing. Yeah.
+So there we are, lost at least four hours to find this out. They say you learn by doing. Yeah. Especially by doing the same thing over and over the wrong way because of incomplete information.
+
 
