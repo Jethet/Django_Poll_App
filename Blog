@@ -13,3 +13,9 @@ The obvious choice: tutorials from Django. The tutorial guides you through the c
 
 There is also an advanced tutorial (perhaps later?).
 So what can I say about this tutorial (docs.djangoproject.com)? It works so far.
+
+BUT: in almost all documentation and tutorials I have come across, the importance of a virtual environment was highlighted.
+That is very good because a venv is indeed important. But why is the information always incomplete? You get info on how to create and activate a virtual environment, but nobody explains that if you work with a venv you have to INSTALL DJANGO IN THE VENV even if you have instelled Django before. You should also CONTINUE in the venv with django-admin startproject mysite.
+Otherwise, you will not be able to run $python manage.py runserver and get to see the "Congratulations" page on hhttp://127.0.0.1:8000/.
+So there we are, lost at least four hours to find this out. They say you learn by doing. Yeah.
+
