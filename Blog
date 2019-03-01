@@ -19,4 +19,11 @@ That is very good because a venv is indeed important. But why is the information
 Otherwise, you will not be able to run $python manage.py runserver and get to see the "Congratulations" page on hhttp://127.0.0.1:8000/.
 So there we are, lost at least four hours to find this out. They say you learn by doing. Yeah. Especially by doing the same thing over and over the wrong way because of incomplete information.
 
+March 1:
+Still following the tutorial and no major problems so far. It has a clear logic and I more or less understand what is done, although I will not be able to reproduce it by myself. I have created models, learned to update the settings to include the app under INSTALLED APPS so that the app is created in the overall project. I understand the app is 'plugable' and can be used in other projects by just adding it as installed app. I have also learned about the commands makemigration and migrate as way of saving and applying changes to models. In the project SQL is used and it is recommended to use SQLite so I have seen how SQL creates table names, primary keys, IDs, Foreign Key and all sorts of field types. The command sqlmigrate prints to screen everything SQL provides for your database and you can check it. With  the command python manage.py check you can check if there are issues in your project.
+
+So that is a lot of information. The API was introduced and some commands in the shell were demonstrated and explained. There is a lot more to it but I now have an impression of the ways you can search the databse using primary keys or id's etc. etc. Very interesting but also too much to take in so it was good the tutorial only dived into a few examples.
+
+
+
 
