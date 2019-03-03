@@ -30,7 +30,11 @@ So what can I say? Yesterday must have been my lucky day. Today, the command to 
 
 I am trying to get the bigger picture but it is so much information that it is not easy to get my head around it. Maybe I will make some sort of overview of the steps without all the detail, for an at-a-glance idea of what I am doing. The project is still interesting and I very much want to continue and also do more of these tutorials. Somehow I feel a bit stressed because I lose so much time with these stupid things like not getting the venv activated. We'll see how that works (or not) tomorrow.
 
-
+March 3:
+I continued with the tutorial. The venv is still activated - I will not deactivate it until I find out what this problem with the command is.
+The app runs on the server but not all pages. The admin pages run OK, that is good. I have gone through the .html files a number of times to correct the code. Compared to Python, HTML looks ugly and is hardly readable (but I have not yet done any tutorial on HTML so that is a handicap). It is a very complicated language and as it turned out, I forgot a number of / in the code. I also found that the file with the URL paths has the paths as a list but still adds a comma at the end of the list. Strange.
+Anyway, after making corrections I ran the server and with http://127.0.0.1:8000/polls/ I do get the page with the poll question (just one formulated so far) and when I click on it, I get the two options to choose from. When I choose and click on vote, however, a page with Error 500 appears. I have gone through all my pages (models, views, urls) and all HTML templates but cannot find incorrect code. I still wonder about this comma at the end of the list of URLs but since both the mysite/mysite/urls.py and the mysite/polls/urls.py use brackets as well as a comma after the last item, I suppose it must be correct.
+I need someone to check the code for me. There is a vague remark on Stackoverflow about the url maybe being used already or a 'wild card' - no idea what is meant by that. 
 
 
 
