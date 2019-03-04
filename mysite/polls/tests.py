@@ -1,7 +1,3 @@
-# This code creates a django.test.TestCase subclass with a method that creates
-# a Question instance with a pub_date in the future. Then the output is checked
-# of was_published_recently(). This should be False.
-
 import datetime
 
 from django.test import TestCase
@@ -9,6 +5,25 @@ from django.utils import timezone
 from django.urls import reverse
 
 from .models import Question
+
+class QuestionDetailViewTests(TestCase):
+
+    def test_future_question(self):
+        # Detail view of a question with pub_date in the future returns
+        # a 404 not found:
+        future_question = create_question(question_text='Future question.', days=5)
+        url = reverse('polls:detail', args=(future_question.id,))
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 404)
+
+    def test_past_question(self):
+        # Detail view of question with pub_date in the past displays
+        # the question's text:
+        past_question = create_question(question_text='Past Question.', days=-5)
+        url = reverse('polls:detail', args=(past_question.id,))
+        response = self.client.get(url)
+        self.assertContains(response, past_question.question_text)
+
 
 def create_question(question_text, days):
     """
