@@ -1,5 +1,5 @@
 February 25:
-After the first meeting with my coach Lori King, I started out learning Django with the Djangogirls tutorial. For this, I installed PaizaCloud and created a virtual environment. The tutorial is interesting, though obviously the audience is meant to be of a younger age. Anyway, my goal was to work through the tutorial this week and also look at an HTML tutorial that codebar.io has on its website.
+After the prep meeting with my coach Lori King, I started out learning Django with the Djangogirls tutorial. For this, I installed PaizaCloud and created a virtual environment. The tutorial is interesting, though aimed at a younger audience with a lot of "you're awesome" etc. Anyway, my goal was to work through the tutorial this week and also look at an HTML tutorial that codebar.io has on its website.
 
 February 27:
 The initial plan proved to be a bit too optimistic. The tutorial turned out to be somewhat outdated: a newer version of Django caused problems. I decided to switch to a tutorial called Django-Marcador. This tutorial is aimed at creating an app to manage bookmarks. It is interesting and I achieved some things (getting the basic app running on the development server, being able to use it and make changes online etc.). However, further down into the code (building the frontend, configuring URLs, views and templates) it turned out that also this tutorial used an older version of Django and there were too many conflicts in the code.
@@ -37,5 +37,12 @@ Anyway, after making corrections I ran the server and with http://127.0.0.1:8000
 I need someone to check the code for me. There is a vague remark on Stackoverflow about the url maybe being used already or a 'wild card' - no idea what is meant by that. 
 
 Something else I learned: by default, Django puts DEBUG=True in the settings.py file. It seems you should only set this to True in case you want to test the app. For deploying your web app, you need to change the setting to DEBUG=False. That returns an error when you run the server because if DEBUG=False you also need to change ALLOWED_HOSTS = [] to ALLOWED_HOSTS = ['*'] or specify the path between '' and add 'localhost' (I did not try this). It is very strange that DEBUG=True is the default when at the same time Django docs warns that it should 'never' be set to True unless for testing (it is a security issue, I believe). Why not set the default to False? I am probably naive to think that would be the solution ...
+
+LESSONS LEARNED: Expect the unexpected. Even if the documentation prescribes a specific command it may still not work - the mysteries of coding. 
+
+March 4:
+In my Skype with Lori I discussed the fact that it would be helpful to have someone go through the code with me. I am pretty certain there is a hickup somewhere but after going through the various code files a few times, I think I have become blind to mistakes. Also, it would be a help to get an explanation by someone else. A tutorial only goes so far. The Django tutorial does not have a Q&A section, which is not helpful.
+
+Today I have gone through the section on testing. Using the code given in the tutorial, it is not difficult to test and I discovered one typo in my code. However, I only have a very vague idea why the code for the tests is written the way that it is and I would not be able to write these tests myself. I have the feeling that I am getting lost in a sea of functions and variables and am losing the overview a bit. In any case, my goal is to do at least two more tutorials after this one to see if I can cement some of this into memory for longer than just a few weeks. 
 
 
