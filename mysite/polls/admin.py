@@ -5,6 +5,7 @@ from .models import Question
 # This tells admin that Question objects have an admin interface.
 
 class QuestionAdmin(admin.ModelAdmin):
-    fiels = ['pub_date', 'question_text']
+    fieldset = [(None, {'fields': ['question_text']}),
+                ('Date information', {'fields': ['pub_date']}),]
 
 admin.site.register(Question, QuestionAdmin)
