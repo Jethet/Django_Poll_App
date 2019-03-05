@@ -4,9 +4,16 @@ from .models import Choice, Question
 # Register your models here.
 # This tells admin that Question objects have an admin interface.
 
+class ChoiceInline(admin.StackedInline):
+    model = Choice
+    extra = 3
+
 class QuestionAdmin(admin.ModelAdmin):
-    fieldset = [(None, {'fields': ['question_text']}),
-                ('Date information', {'fields': ['pub_date']}),]
+    fieldsets = [
+        (None, {'fields': ['question_text']}),
+        ('Date information', {'fields': ['pub_date'],
+                 'classes': ['collapse']}),
+    ]
+    inlines = [ChoiceInline]
 
 admin.site.register(Question, QuestionAdmin)
-admin.site.register(Choice)
