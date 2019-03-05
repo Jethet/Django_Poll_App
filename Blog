@@ -47,4 +47,6 @@ Today I have gone through the section on testing. Using the code given in the tu
 
 Right now, I only have a very vague idea why the code for the tests is written the way that it is and I would not be able to write these tests myself. I have the feeling that I am getting lost in a sea of functions and variables and am losing the overview a bit. In any case, my goal is to do at least two more tutorials after this one to see if I can cement some of this into memory for longer than just a few weeks. 
 
+March 5:
+On March 3 I found that there was an issue with DEBUG and ALLOWED_HOSTS. Today I again run into an issue with DEBUG. To run .css files, DEBUG must be set to True. This may cause issues again as I described in my post of March 3, but I do need to see if the layout is changing as a result of my css code. Yes, it does. The only thing is that the background does not change even though a background.gif file has been created and included in the css stylesheet.
 
