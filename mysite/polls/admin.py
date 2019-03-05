@@ -4,7 +4,7 @@ from .models import Choice, Question
 # Register your models here.
 # This tells admin that Question objects have an admin interface.
 
-class ChoiceInline(admin.StackedInline):
+class ChoiceInline(admin.TabularInline):
     model = Choice
     extra = 3
 
